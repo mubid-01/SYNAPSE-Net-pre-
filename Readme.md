@@ -1,3 +1,5 @@
+
+
 # SYNAPSE-Net: A Unified Framework with Lesion-Aware Hierarchical Gating for Robust Segmentation of Heterogeneous Brain Lesions
 
 This repository provides the model description for **SYNAPSE-Net**, a single, unified framework for robustly segmenting heterogeneous brain lesions from multi-modal MRI scans, as presented in the paper:
@@ -24,7 +26,7 @@ Instead of creating separate 'point solutions' for each task, SYNAPSE-Net provid
 The SYNAPSE-Net architecture is composed of three key stages: a multi-stream encoder, a hybrid bottleneck for feature fusion, and a hierarchical gated decoder for mask reconstruction.
 
 ![Graphical Abstract](Graphical%20Abstract.png)
-*Fig 1. The SYNAPSE-Net Graphical Abstract, consisting of N parallel CNN encoders, a hybrid bottleneck, and a Hierarchical Gated Decoder.*
+*Fig 1. The Graphical Abstract*
 
 #### 1. Unified Multi-Stream Encoder
 To preserve crucial modality-specific pathological information, each input MRI sequence (e.g., T1, T2-FLAIR, DWI) is processed by an independent, parallel CNN encoder. This "late-fusion" approach prevents the early loss of subtle indicators. Skip connections from each stream are later refined and fused using a Convolutional Block Attention Module (CBAM) before being passed to the decoder.
