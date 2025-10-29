@@ -1,5 +1,5 @@
 
-#🚀 Note: The complete source code and pretrained weights will be released soon. #
+#🚀 Note: The complete source code and pretrained weights will be released soon.
 
 
 # SYNAPSE-Net: A Unified Framework with Lesion-Aware Hierarchical Gating for Robust Segmentation of Heterogeneous Brain Lesions
