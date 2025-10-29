@@ -76,29 +76,29 @@ This repository contains the implementation of the SYNAPSE-Net model for brain l
 
 ```
 .
-├── src/
-│   ├── data_loaders/
-│   │   ├── __init__.py
-│   │   └── dataset_wmh.py         # Dataset and augmentation utilities
-│   ├── models/
-│   │   ├── __init__.py
-│   │   ├── blocks.py             # Neural network building blocks
-│   │   └── SYNAPSE-Net_N_mod.py      # Main model architecture
-│   └── utils/
-│       └── helpers/
-|       │   ├── __init__.py           
-|       │   └── wmh_helpers.py
-|       ├── __init__.py           
-|       └──utils.py
-├── scripts/
-│   └── wmh/
-│       ├── evaluate_test_set.py              
-│       ├── inference_sliding_window.py
-|       ├── test_inference_final.py
-|       ├── train.py
-│       └── tune_postprocessing.py        
-├── requirements.txt
-└── README.md
+├── src/                                      # Main source code for the project
+│   ├── data_loaders/                         # Handles all data loading and preprocessing
+│   │   ├── __init__.py                       # Makes 'data_loaders' a Python package
+│   │   └── dataset_wmh.py                    # Defines the PyTorch Dataset for loading and augmenting WMH brain scan data
+│   ├── models/                               # Contains the neural network architecture definitions
+│   │   ├── __init__.py                       # Makes 'models' a Python package
+│   │   ├── blocks.py                         # Contains reusable neural network components like convolutional and residual blocks
+│   │   └── SYNAPSE-Net_N_mod.py              # Defines the main neural network architecture for the segmentation task
+│   └── utils/                                # Utility scripts and helper functions
+│       ├── helpers/                          # More specific helper modules
+│       │   ├── __init__.py                   # Makes 'helpers' a Python package
+│       │   └── wmh_helpers.py                # Provides specialized helper functions for WMH data processing or evaluation
+│       ├── __init__.py                       # Makes 'utils' a Python package
+│       └── utils.py                          # Contains general utility functions like loss functions, metrics, and training helpers
+├── scripts/                                  # Executable scripts for running different stages of the pipeline
+│   └── wmh/                                  # Scripts specifically for the WMH (White Matter Hyperintensities) task
+│       ├── evaluate_test_set.py              # Calculates and reports final performance metrics on the test set predictions
+│       ├── inference_sliding_window.py       # Generates full-resolution probability maps on a dataset using sliding window inference
+│       ├── test_inference_final.py           # Runs final inference on the test set and saves the resulting binary segmentation masks
+│       ├── train.py                          # Main script to execute the model training and validation pipeline
+│       └── tune_postprocessing.py            # Finds optimal post-processing parameters (threshold, min size) using validation set results
+├── requirements.txt                          # Lists project dependencies to be installed via pip
+└── README.md                                 # Provides an overview of the project, setup instructions, and how to run it
 ```
 
 ## Requirements
