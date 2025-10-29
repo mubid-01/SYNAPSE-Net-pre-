@@ -23,8 +23,8 @@ Instead of creating separate 'point solutions' for each task, SYNAPSE-Net provid
 
 The SYNAPSE-Net architecture is composed of three key stages: a multi-stream encoder, a hybrid bottleneck for feature fusion, and a hierarchical gated decoder for mask reconstruction.
 
-
-*Fig 1. The SYNAPSE-Net architecture, consisting of N parallel CNN encoders, a hybrid bottleneck, and a Hierarchical Gated Decoder.*
+![Graphical Abstract](Graphical%20Abstract.png)
+*Fig 1. The SYNAPSE-Net Graphical Abstract, consisting of N parallel CNN encoders, a hybrid bottleneck, and a Hierarchical Gated Decoder.*
 
 #### 1. Unified Multi-Stream Encoder
 To preserve crucial modality-specific pathological information, each input MRI sequence (e.g., T1, T2-FLAIR, DWI) is processed by an independent, parallel CNN encoder. This "late-fusion" approach prevents the early loss of subtle indicators. Skip connections from each stream are later refined and fused using a Convolutional Block Attention Module (CBAM) before being passed to the decoder.
